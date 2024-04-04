@@ -1,158 +1,206 @@
-@font-face {
-  font-family: "merriweather";
-  src: url("../fonts/Merriweather-Regular.ttf");
-}
-
+@import url("https://fonts.googleapis.com/css?family=Lato|Merriweather&display=swap");
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: "merriweather";
+  font-family: "Merriweather", serif;
 }
-
-header {
-  height: 5vh;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+/* Navigation! */
+nav ul {
+  text-align: right;
+  list-style-type: none;
 }
-
-header nav a {
-  color: black;
+nav li {
+  display: inline-block;
+  margin: 1vh 0.5vw;
+}
+nav li:last-of-type {
+  display: inline-block;
+  margin: 1vh 1vw 1vh 0.5vw;
+}
+nav a {
   text-decoration: none;
-  margin: 10px;
+  color: #202020;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-family: "Lato", sans-serif;
 }
-
-/* section 1 */
-
-main section:nth-of-type(1) img {
-  width: 100%;
-  height: 400px;
-}
-
-main section:nth-of-type(1) img:hover {
+/* -- */
+/* Allgemein */
+section:nth-of-type(5) img:hover {
   box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.1);
 }
+h1 {
+  font-size: 3em;
+  width: 35vw;
+  padding-bottom: 2vh;
+}
+section {
+  margin-top: 15vh;
+  margin-left: 10vw;
+}
+p {
+  font-size: 1.2em;
+  width: 35vw;
+  line-height: 2em;
+  color: #202020;
+}
+figure {
+  display: inline-block;
+}
 
-main section:nth-of-type(1) {
+section img {
+  height: 60vh;
+}
+
+/* -- */
+/* Section 1 - absurd illustrations */
+section:nth-of-type(1) {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin: 40px;
+  align-items: flex-start;
+  padding: 50px 100px;
+  margin-bottom: 14rem;
 }
 
-main section:nth-of-type(1) article {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 20px;
-  padding-left: 10vw;
-}
-
-main section:nth-of-type(1) article h2,
-main section:nth-of-type(1) article p {
-  width: 35%;
-}
-
-main section:nth-of-type(1) article div a {
-  border: 1px solid black;
-  background-color: black;
-  color: white;
+section:nth-of-type(1) a:first-of-type {
   text-decoration: none;
-  padding: 11px;
+  background-color: #202020;
+  color: #fff;
+  padding: 1em;
   border-radius: 10px;
 }
-
-main section:nth-of-type(1) article div a:not(:first-child) {
-  background-color: white;
-  color: black;
+section:nth-of-type(1) a:nth-of-type(2) {
+  text-decoration: none;
+  background-color: #fff;
+  color: #202020;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-
-/* section 2 */
-
-main section:nth-of-type(2) {
+section:nth-of-type(1) p:last-of-type {
+  margin-top: 4vh;
+}
+/* --- */
+/* Section 2 - real beauty */
+section:nth-of-type(2) {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  width: 90vw;
-  margin: 20px auto;
-}
-main section:nth-of-type(2) div {
-  width: 50%;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px 100px;
+  margin-bottom: 14rem;
 }
 
-main section:nth-of-type(2) div img {
+/* ! ODER OHNE FLEX  */
+/* --- */
+/* Section 3 - expressiveness is ... */
+section:nth-of-type(3) {
+  background: url(../img/illustration3.png) no-repeat;
+  background-position-x: 80%;
+  background-size: contain;
+  padding-bottom: 30vh;
+}
+/* --- */
+/* Section 4 - end*/
+section:nth-of-type(4),
+section:nth-of-type(5),
+section:nth-of-type(6),
+section:nth-of-type(7) {
   text-align: center;
-  width: 50%;
+  margin: 15vh auto 0;
+  width: 99vw;
+}
+section:nth-of-type(4) h1,
+section:nth-of-type(5) h1,
+section:nth-of-type(6) h1,
+section:nth-of-type(7) h1,
+section:nth-of-type(4) p,
+section:nth-of-type(5) p,
+section:nth-of-type(6) p {
+  width: 60vw;
+  margin: 0 auto;
+}
+/* section 4 - illustrations for applications */
+section:nth-of-type(4) img {
+  width: 25vw;
+  margin: 2.5vw;
 }
 
-main section:nth-of-type(2) article {
-  width: 50%;
+/*  */
+/* section 5 - examples of use */
+section:nth-of-type(5) img {
+  flex-basis: 200px;
+  margin: 2vw;
 }
-
-main section:nth-of-type(2) article h2 {
-  width: 35%;
+/* section 6 - download illustrations */
+section:nth-of-type(6) div {
+  background-color: rgba(85, 172, 238, 0.1);
+  width: 25vw;
+  margin: 10vh auto;
+  padding: 10vh 4vw;
 }
-
-main section:nth-of-type(2) article p {
-  width: 67%;
+section:nth-of-type(6) p {
+  width: 40vw;
 }
-
-/* section 3 */
-
-main section:nth-of-type(3) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  width: 90vw;
-  margin: 20px auto;
+section:nth-of-type(6) ul {
+  padding: 2vh 0 5vh;
+  list-style-type: none;
 }
-main section:nth-of-type(3) div {
-  width: 50%;
+h3 {
+  font-size: 5em;
+  padding: 7vh 0;
 }
-
-main section:nth-of-type(3) div img {
+h4 {
+  color: #7e7e7e;
+}
+div a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #55acee;
+  padding: 1em 3em;
+  border-radius: 10px;
+}
+/* --- */
+/* Footer */
+footer {
+  width: 99vw;
+  margin: 0;
+  padding: 0;
+}
+footer h1,
+footer p {
+  width: 99vw;
+  margin: 0 auto;
   text-align: center;
-  width: 50%;
 }
-
-main section:nth-of-type(3) article {
-  width: 50%;
+footer p:nth-of-type(2n + 1) {
+  color: #7e7e7e;
 }
-
-main section:nth-of-type(3) article h2 {
-  width: 35%;
+footer a {
+  text-decoration: none;
+  color: #000;
 }
-
-main section:nth-of-type(3) article p {
-  width: 67%;
+footer p:nth-of-type(4) a:nth-of-type(1)::before {
+  content: "\002e";
+  padding-right: 5px;
+  font-size: 2em;
+  color: #3b5998;
 }
-
-/* section 4 */
-main section:nth-of-type(4) {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 90vw;
+footer p:nth-of-type(4) a:nth-of-type(2)::before {
+  content: "\002e";
+  padding-right: 5px;
+  font-size: 2em;
+  color: #fcaf45;
 }
-
-main section:nth-of-type(4) p {
-  text-align: center;
-  width: 49%;
+footer p:nth-of-type(4) a:nth-of-type(3)::before {
+  content: "\002e";
+  padding-right: 5px;
+  font-size: 2em;
+  color: #55acee;
 }
-
-main section:nth-of-type(4) div {
-  width: 69vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+footer p:nth-of-type(4) a:nth-of-type(4)::before {
+  content: "\002e";
+  padding-right: 5px;
+  font-size: 2em;
+  color: #c4302b;
 }
-
-main section:nth-of-type(4) div img {
-  width: 30%;
-}
-
-
